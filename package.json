@@ -1,6 +1,6 @@
 {
   "name": "vue-perfect-print",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a simple and fast component for printing the local content of the page.",
   "main": "index.js",
   "scripts": {
