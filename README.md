@@ -1,24 +1,39 @@
 # vue-perfect-print
-
-## Project setup
+This is a simple and fast component for printing the local content of the page.
+## Install
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install vue-perfect-print
 ```
 
-### Compiles and minifies for production
 ```
-npm run build
-```
+import VuePerfectPrint from 'vue-perfect-print'
 
-### Lints and fixes files
+Vue.use(VuePerfectPrint);
 ```
-npm run lint
+## Run demo
 ```
+<template>
+    <div>
+        <button @click="print">click print</button>
+    </div>
+</template>
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<script>
+    export default {
+        methods:{
+            print(){
+                this.perfectPrint({
+                    content: "<h1>打印</h1>"
+                });
+            }
+        }
+    }
+</script>
+```
+### Parameter description
+
+Parameter | Required | Description
+----|------|----
+id | false  | ID of the print window
+content | true  | Print content, support HTML and text
+showHeaderFooter | false  | Display page and footer, default false
